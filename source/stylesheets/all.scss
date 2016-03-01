@@ -1,5 +1,4 @@
-$red: #ff0000;
-
-strong {
-    color: $red;
-}
+@import "normalize";
+@import "variables";
+@import "grid";
+@import "navigation";
