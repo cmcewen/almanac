@@ -1,4 +1,7 @@
-// Headers
+body {
+    font-size: 1em; /* 16px */
+    line-height: 1.5em; /* 24px */
+}
 
 h1 {
     font-size: 4.375em; /* 70px */
@@ -10,16 +13,7 @@ h2 {
     font-weight: 400;
 }
 
-// Paragraph
-
-p, ul {
-    font-size: 1em; /* 16px */
-    line-height: 1.5em; /* 24px */
-}
-
-// Links
-
-nav a {
+a {
     font-size: 0.75em; /* 12px */
     text-transform: uppercase;
     font-weight: 800;
@@ -32,9 +26,16 @@ nav a {
     }
 }
 
-// Figure Caption
-
 figcaption {
     font-size: 0.625em; /* 10px */
     font-weight: 400;
+}
+
+ul {
+    padding: 0 70px;
+
+    li {
+        padding-bottom: 6px;
+        list-style-type: circle;
+    }
 }
