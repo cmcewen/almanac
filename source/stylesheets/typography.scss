@@ -1,6 +1,7 @@
 body {
+    font-family: "fira-sans", "Helvetica Neue", Helvetica, Verdana;
     font-size: 1em; /* 16px */
-    line-height: 1.5em; /* 24px */
+    line-height: 1.75em; /* 28px */
 }
 
 h1 {
@@ -11,6 +12,11 @@ h1 {
 h2 {
     font-size: 1.375em; /* 22px */
     font-weight: 400;
+}
+
+h3 {
+    font-size: 1em; /* 16px */
+    font-weight: 800;
 }
 
 a {
