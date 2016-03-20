@@ -1,12 +1,16 @@
 body {
-    font-family: "fira-sans", "Helvetica Neue", Helvetica, Verdana;
+    font-family: "usual", "Helvetica Neue", Helvetica, Verdana;
     font-size: 1em; /* 16px */
     line-height: 1.75em; /* 28px */
+    font-weight: 400;
 }
+
+p + p { margin-top: 20px; }
+h3 + p { margin-top: 20px; }
 
 h1 {
     font-size: 4.375em; /* 70px */
-    font-weight: 400;
+    font-weight: 700;
 }
 
 h2 {
@@ -15,8 +19,13 @@ h2 {
 }
 
 h3 {
+    font-size: 1.375em; /* 22px */
+    font-weight: 700;
+}
+
+h4, h5, h6 {
     font-size: 1em; /* 16px */
-    font-weight: 800;
+    font-weight: 700;
 }
 
 a {
@@ -28,17 +37,17 @@ a {
     color: $black;
 
     &:hover {
-        color: $gray;
+        color: $orange;
+        cursor: pointer;
     }
 }
 
-figcaption {
+figcaption, small {
     font-size: 0.625em; /* 10px */
     font-weight: 400;
 }
 
 ul {
-    padding: 0 70px;
 
     li {
         padding-bottom: 6px;

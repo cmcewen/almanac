@@ -1,5 +1,4 @@
 // Header
-
 header {
   width: 100%;
   height: 100px;
@@ -22,14 +21,19 @@ header {
 .white { color: $white; }
 .gray { color: $gray }
 
-.sixty-six {
-    width: 66.66667%;
-    max-width: 290px;
-    padding: 0 30px;
+.left {
+    width: 80%;
     display: inline-block;
 }
 
+.right {
+    float: right;
+    display: inline-block;
+    width: initial;
+}
+
 // Body
+body { background-color: $white; }
 
 .wrapper {
   max-width: 480px;
@@ -41,42 +45,72 @@ h1 {
     left: -15px;
 }
 
-h3 {
-    margin-bottom: 10px;
-}
-
 #color-block {
   width: 290px;
   height: 230px;
   background-color: $orange;
   position: relative;
-  // top: -30px;
+  opacity: 0.96;
   padding: 30px;
   display: table-cell;
   vertical-align: bottom;
 }
 
-// .about section
+section {
+    padding: 30px;
+}
 
-#about {
-  margin: 30px 0;
+#contact {
+    margin: 0 !important;
+    background-color: $black;
+    padding: 30px;
 
-  figure {
-      float: right;
-      margin: 60px 0 30px;
+    p, h3 {
+        color: $white;
+    }
+}
+
+figure {
+  margin: 40px 0 30px;
+  width: 100%;
+  display: inline-block;
+
+  img {
+      max-width: 480px;
       width: 100%;
-
-      img {
-          width: 240px;
-          float: right;
-          height: 180px;
-      }
-
-      figcaption {
-          float: right;
-          width: 100%;
-          text-align: right;
-          margin-top: 10px;
-      }
   }
+}
+
+@mixin figcaption {
+    margin-top: 10px;
+    width: 100%;
+}
+
+figcaption.right {
+    @include figcaption;
+    text-align: right;
+}
+
+figcaption.left {
+    @include figcaption;
+    text-align: left;
+}
+
+#email-us {
+    font-size: 1.375em; /* 22px */
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: normal;
+    color: $white;
+    background: $orange;
+    display: block;
+    padding: 20px 20px 15px 20px;
+    margin: 20px 0 10px;
+    border-radius: 2px;
+
+    &:hover {
+        background-color: $orange 0.6;
+        cursor: pointer;
+    }
 }
