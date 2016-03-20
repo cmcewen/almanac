@@ -42,9 +42,11 @@ a {
     }
 }
 
-figcaption, small {
+figcaption, small, .small {
     font-size: 0.625em; /* 10px */
     font-weight: 400;
+    line-height: 1.625em; /* 16px */
+    display: inline-block;
 }
 
 ul {
