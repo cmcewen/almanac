@@ -13,17 +13,36 @@ header {
         float: left;
         display: inline-block;
         padding-right: 20px;
+
+        &:before {
+            content: '';
+        }
       }
     }
   }
 }
 
 .white { color: $white; }
-.gray { color: $gray }
+.gray { color: $gray; }
+.orange { color: $orange; }
+
+// Body
+body { background-color: $white; }
+
+.wrapper {
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+}
 
 .left {
     width: 80%;
+    max-width: 400px;
     display: inline-block;
+    float: left;
+    clear: both;
 }
 
 .right {
@@ -32,32 +51,28 @@ header {
     width: initial;
 }
 
-// Body
-body { background-color: $white; }
-
-.wrapper {
-  max-width: 480px;
-  margin: 0 auto;
-}
-
 h1 {
     position: relative;
     left: -15px;
 }
 
 #color-block {
-  width: 290px;
+  width: 86%;
+  max-width: 400px;
   height: 230px;
   background-color: $orange;
   position: relative;
   opacity: 0.96;
-  padding: 30px;
-  display: table-cell;
-  vertical-align: bottom;
+
+  h2 { padding: 30px; }
 }
 
 section {
     padding: 30px;
+
+    &:last-child {
+        margin-bottom: 30px;
+    }
 }
 
 #contact {
@@ -96,6 +111,32 @@ figcaption.left {
     text-align: left;
 }
 
+ul {
+
+    li {
+        list-style-position: inside;
+        list-style-type: none;
+        text-indent: -1.375em;
+        padding-left: 1em;
+
+        &:nth-child(1):before { color: darken($orange, 30%); }
+        &:nth-child(2):before { color: darken($orange, 20%); }
+        &:nth-child(3):before { color: darken($orange, 10%); }
+        &:nth-child(4):before { color: $orange; }
+        &:nth-child(5):before { color: #FF820D; }
+        &:nth-child(6):before { color: #F1B10B; }
+        &:nth-child(7):before { color: lighten(#F1B10B, 20%); }
+
+        &:before {
+            color: $orange;
+            content: '\2022';
+            font-size: 1em;
+            padding-right: 1em;
+        }
+
+    }
+}
+
 #email-us {
     font-size: 1.375em; /* 22px */
     font-weight: 400;
@@ -113,4 +154,35 @@ figcaption.left {
         background-color: $orange 0.6;
         cursor: pointer;
     }
+}
+
+// Desktop
+@media only screen and (min-width: 840px){
+    .wrapper { max-width: 840px; }
+
+    .left {
+        clear: both;
+        width: 50%;
+    }
+
+    .right {
+        width: 50%;
+    }
+
+    figure.right {margin-top: -160px}
+
+    section {
+        width: 780px;
+        padding: 60px;
+    }
+
+    #color-block {
+        width: 94%;
+        max-width: none;
+        height: 500px;
+
+      h2 { padding: 80px; }
+    }
+
+    #contact { padding: 60px; }
 }
