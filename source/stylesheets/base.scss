@@ -38,11 +38,9 @@ body { background-color: $white; }
 }
 
 .left {
-    width: 80%;
-    max-width: 400px;
-    display: inline-block;
     float: left;
     clear: both;
+    display: inline-block;
 }
 
 .right {
@@ -68,17 +66,16 @@ h1 {
 }
 
 section {
-    padding: 30px;
-
     &:last-child {
         margin-bottom: 30px;
     }
 }
 
+#about, #what-we-do, #why-prototype, #speed, #contact, #thank-you {padding: 30px;}
+
 #contact {
     margin: 0 !important;
     background-color: $black;
-    padding: 30px;
 
     p, h3 {
         color: $white;
@@ -93,6 +90,7 @@ figure {
   img {
       max-width: 480px;
       width: 100%;
+      float: right;
   }
 }
 
@@ -157,27 +155,30 @@ ul {
 }
 
 // Desktop
-@media only screen and (min-width: 840px){
-    .wrapper { max-width: 840px; }
+@media only screen and (min-width: 768px){
+    .wrapper { max-width: 768px; }
 
     .left {
         clear: both;
-        width: 50%;
+        width: 48%;
+        padding-right: 2%;
     }
 
     .right {
-        width: 50%;
+        width: 48%;
+        padding-left: 2%;
     }
 
-    figure.right {margin-top: -160px}
+    figure.right {margin-top: 0.75em}
+    #why-prototype .right, #speed .right {margin-top: 3em;}
 
-    section {
-        width: 780px;
-        padding: 60px;
-    }
+    section {max-width: 708px;}
+
+    #speed {margin-bottom: 30px}
+    #thank-you {margin-top:30px}
 
     #color-block {
-        width: 94%;
+        width: 90%;
         max-width: none;
         height: 500px;
 
@@ -185,4 +186,15 @@ ul {
     }
 
     #contact { padding: 60px; }
+}
+
+// Super big desktop
+@media only screen and (min-width:1366px){
+    body {font-size: 1.25em /* 20px */}
+    .wrapper {max-width:1280px;}
+    section {max-width: 1160px;}
+    header nav ul li {padding-right: 40px;}
+    #color-block{width: 100%;height:700px;}
+    #about, #what-we-do, #why-prototype, #speed, #contact, #thank-you {padding: 100px 30px;}
+    #contact {padding: 100px}
 }

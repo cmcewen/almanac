@@ -20,7 +20,7 @@ h2 {
 
 h3 {
     font-size: 1.375em; /* 22px */
-    font-weight: 700;
+    font-weight: 400;
 }
 
 h4, h5, h6 {
@@ -50,7 +50,7 @@ figcaption, small, .small {
 }
 
 // Desktop
-@media only screen and (min-width: 840px){
+@media only screen and (min-width: 768px){
     h2 {
         font-size: 2.25em; /* 36px */
         line-height: 1.25em;
