@@ -13,6 +13,10 @@
   animation-fill-mode: both;
 }
 
+//
+// Fade in page to avoid FOUT
+//
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -29,18 +33,4 @@
   animation-delay: 0.25s;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
-}
-
-@keyframes colorBlock {
-    0% { background-color: $orange; }
-    33% { background-color: #FF820D; }
-    66% { background-color: #F1B10B; }
-}
-
-.colorBlock {
-    animation-name: colorBlock;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-    -webkit-animation-duration: 20s;
-    animation-duration: 20s;
 }

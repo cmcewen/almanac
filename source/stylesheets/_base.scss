@@ -1,9 +1,11 @@
+//
 // Header
-header {
-  width: 100%;
-  height: 100px;
+//
 
-  nav {
+nav {
+  position: absolute;
+  right: 0;
+  z-index: 1000;
 
     ul {
       float: right;
@@ -20,13 +22,25 @@ header {
       }
     }
   }
+
+#color-block {
+  height: 400px;
+  background-color: $orange;
+  position: relative;
+  padding: 100px 30px 0;
 }
 
 .white { color: $white; }
 .gray { color: $gray; }
 .orange { color: $orange; }
 
+
+
+
+//
 // Body
+//
+
 body { background-color: $white; }
 
 .wrapper {
@@ -35,6 +49,7 @@ body { background-color: $white; }
   margin: 0 auto;
   display: flex;
   flex-flow: column;
+  position: relative;
 }
 
 .left {
@@ -49,33 +64,13 @@ body { background-color: $white; }
     width: initial;
 }
 
-h1 {
-    position: relative;
-    left: -15px;
-}
+#speed, #contact {margin-bottom: 30px;}
 
-#color-block {
-  width: 86%;
-  max-width: 400px;
-  height: 230px;
-  background-color: $orange;
-  position: relative;
-  opacity: 0.96;
-
-  h2 { padding: 30px; }
-}
-
-section {
-    &:last-child {
-        margin-bottom: 30px;
-    }
-}
-
-#about, #what-we-do, #why-prototype, #speed, #contact, #thank-you {padding: 30px;}
+#about, #what-we-do, #why-prototype, #speed, #thank-you {padding: 30px;}
 
 #contact {
-    margin: 0 !important;
-    background-color: $black;
+    background-color: $darkgray;
+    padding: 60px 30px;
 
     p, h3 {
         color: $white;
@@ -136,25 +131,41 @@ ul {
 }
 
 #email-us {
-    font-size: 1.375em; /* 22px */
-    font-weight: 400;
-    text-decoration: none;
-    text-transform: none;
-    letter-spacing: normal;
-    color: $white;
-    background: $orange;
-    display: block;
-    padding: 20px 20px 15px 20px;
     margin: 20px 0 10px;
-    border-radius: 2px;
 
-    &:hover {
-        background-color: $orange 0.6;
-        cursor: pointer;
+    a {
+        color: $white;
+        background: $orange;
+        display: block;
+        padding: 20px 0;
+        text-align: center;
+        margin: 0 auto;
+        border-radius: 50px;
+        width: 100%;
+        transition: all 0.2s;
+        display: block;
+
+        &:hover {
+            background-color: $lightorange;
+            color: $white;
+            cursor: pointer;
+            width: 95%;
+        }
     }
 }
 
+//
+// 4" screens
+//
+
+@media only screen and (max-width: 320px){
+    #color-block { height: 260px; }
+}
+
+//
 // Desktop
+//
+
 @media only screen and (min-width: 768px){
     .wrapper { max-width: 768px; }
 
@@ -171,30 +182,39 @@ ul {
 
     figure.right {margin-top: 0.75em}
     #why-prototype .right, #speed .right {margin-top: 2.75em;}
-
     section {max-width: 708px;}
-
+    #about, #why-prototype, #speed, #thank-you {padding: 60px 30px;}
+    #what-we-do {padding: 0 30px 60px}
     #speed {margin-bottom: 30px}
     #thank-you {margin-top:30px}
 
     #color-block {
-        width: 90%;
-        max-width: none;
-        height: 440px;
+        padding: 80px;
+        height: 500px;
 
-      h2 { padding: 80px; }
+        h2 {
+            max-width: 640px;
+        }
     }
 
-    #contact { padding: 60px; }
+    #contact { padding: 100px; }
 }
 
-// Super big desktop
+//
+// Super desktop
+//
+
 @media only screen and (min-width:1366px){
-    body {font-size: 1.25em /* 20px */}
+    #color-block {
+        height: 600px;
+
+        h2 {
+            max-width: 800px;
+        }
+    }
     .wrapper {max-width:1280px;}
     section {max-width: 1160px;}
-    header nav ul li {padding-right: 40px;}
-    #color-block{width: 100%;height:700px;}
-    #about, #what-we-do, #why-prototype, #speed, #contact, #thank-you {padding: 100px 30px;}
-    #contact {padding: 100px}
+    nav ul li {padding-right: 40px;}
+    #about, #why-prototype, #speed, #thank-you {padding: 100px 30px;}
+    #what-we-do {padding-bottom: 100px;}
 }
