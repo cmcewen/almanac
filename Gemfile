@@ -14,4 +14,4 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 gem "tzinfo-data", platforms: [:mswin, :mingw, :jruby]
 
 # Deploy to FTP support
-gem 'middleman-deploy', github: 'middleman-contrib/middleman-deploy', branch: 'master'
+gem 'middleman-deploy', '~> 1.0'

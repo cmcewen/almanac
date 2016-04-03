@@ -58,11 +58,11 @@ set :images_dir, 'images'
 ####################
 
 activate :deploy do |deploy|
-  deploy.deploy_method   = :ftp
-  deploy.host            = "ftp.stephenmeszaros.com"
-  deploy.path            = "/almanac.design"
-  deploy.user            = "admin@stephenmeszaros.com"
-  deploy.password        = ")hEv=gsP^%ttkmkff>3k8294Q4sa7g.RzdJ8;"
+  deploy.method   = :ftp
+  deploy.host     = "ftp.stephenmeszaros.com"
+  deploy.path     = "/almanac.design"
+  deploy.user     = "admin@stephenmeszaros.com"
+  deploy.password = ENV["PASSWORD"]
 end
 
 ####################
