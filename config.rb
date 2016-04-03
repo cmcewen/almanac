@@ -62,7 +62,7 @@ activate :deploy do |deploy|
   deploy.host     = "ftp.stephenmeszaros.com"
   deploy.path     = "/almanac.design"
   deploy.user     = "admin@stephenmeszaros.com"
-  deploy.password = ENV["PASSWORD"]
+  deploy.password = ENV["password"]
 end
 
 ####################
